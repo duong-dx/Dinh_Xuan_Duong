@@ -1,0 +1,62 @@
+.ul{
+	
+	list-style: none;
+	line-height: 50px;
+}
+.menu-chinh{
+	height: 80px;
+	width: 100%;
+	background: #00CC00;
+	margin: auto;
+	position: relative;
+}
+.logo{
+	height: 100%;
+	width: 12%;
+	
+	float: left;
+}
+.menu-right{
+	float: left;
+	height: 100%;
+	width: 85%;
+
+}
+.logo>img{
+	height: 100%;
+	width: 100%;
+}
+.a1{
+	color: white;
+	text-decoration: none;
+}
+.item{
+	display: inline-block;
+	padding-right:  10px;
+	border-right: 1px white solid;
+}
+.a1:hover{
+	color: red;
+
+}
+.menu-right .ull{
+	list-style: none;
+	background: #00CC00;
+	position: absolute;
+	display: none;
+}
+.item1{
+	position: absolute;
+}
+.menu2{
+	color: white;
+	padding-right:  10px;
+}
+.ull .menu2:hover{
+	color: #9999FF;
+}
+.item:hover .ull{
+	display: block;
+}
+
+

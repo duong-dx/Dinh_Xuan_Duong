@@ -1,0 +1,17 @@
+
+.div{
+	width: 50%;
+	height: 200px;
+	float: left;
+}
+#div1{
+	background: yellow;
+}
+#div2{
+	background: blue;
+}
+@media (max-width: 600px)  {
+	#div1,#div2{
+		width: 100%;
+	}	
+}

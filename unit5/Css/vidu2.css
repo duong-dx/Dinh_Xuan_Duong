@@ -1,0 +1,49 @@
+.vidu2{
+	background: pink;
+	height: 60px;
+	width: 40%;
+	margin: auto;
+}
+.vidu2 .ul1{
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	line-height: 60px;
+	padding-left: 5px;
+	
+}
+.vidu2 .item1:hover{
+	background: red;
+
+}
+
+.vidu2 .item1{
+	position: relative;
+	height :100%;
+	display: inline-block;
+	padding-right : 5px;
+	border-right: 1px white solid;
+}
+.vidu2 .a1{
+	color: white;
+	text-decoration: none;
+}
+.vidu2 .ul2{
+	display: none;
+	background: pink;
+	position: absolute;
+	list-style: none;
+}
+.vidu2 .item1:hover .ul2{
+	display: block;
+
+
+}
+.vidu2 .item2{
+	color: white;
+	width: 100px;
+	padding-right: 5px;
+}
+.item2:hover{
+	background: red;
+}

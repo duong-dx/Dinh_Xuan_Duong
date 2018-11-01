@@ -1,0 +1,106 @@
+.clear{
+	clear: both;
+}
+.vidu1{
+	background: #CCFFFF;
+	border: 2px #0066CC solid;
+	width:  50%;
+	height: 700px;
+	margin: auto;
+	border-radius: 10px; 
+	position:relative;
+}
+.header{
+	width: 100%;
+	position: relative;
+	height: 80px;
+}
+.header-left{
+	float: left;
+	font-size: 40px;
+	/*position: absolute;*/
+    width:50%;
+	height: 100%;
+	margin-top: 30px;
+	margin-left: 20px;
+
+}
+.header-right{
+	float: right;
+	margin-right: 10px;
+	width: 40%;
+	height: 100%;
+	margin-top: 40px;
+}
+.body{
+	width: 100%;
+	height :500px;
+}
+.body1{
+	width: 60%;
+	height: 200px;
+	margin: auto;
+}
+.button{
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+	color:  white;
+	font-size: 16px;
+}
+.button-fb{
+	margin-bottom: 15px;
+	background: #3B5998;
+
+} 
+ .button-tt{
+	margin-bottom: 15px;
+	background: #0084FF;
+
+}  
+.body .hr1{
+	size: 2px;
+	width: 60%;
+	margin: 30px auto;
+}
+.body2{
+	width: 60%;
+	height: 200px;
+	margin: auto;
+}
+.imput{
+	
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+}
+.ip1{
+	margin-bottom: 10px;
+}.ip2{
+	margin-bottom: 10px;
+}
+.footer{
+	width: 100%;
+	height: 60px;
+}
+.footer .footer1{
+	width: 40%;
+	height: 100%;
+	float: left;
+	font-size: 20px;
+	color: grey;
+	margin-left:40px;
+}
+.footer2{
+	margin-right: 40px;
+	width: 60px;
+	height: 60px;
+	float: right;
+}
+.bt{
+	background: #FF3333	;
+	width: 100%;
+	height: 100%;
+	color: white;
+	border-radius: 10px;
+}

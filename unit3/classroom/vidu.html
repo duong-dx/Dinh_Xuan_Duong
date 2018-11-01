@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css</title>
+	<style type="text/css">
+		/* 1: #red{
+			color: red;
+		}
+		.green{
+			color: green;
+		}
+		.yellow{
+			color: yellow;
+		}*/
+		body .text{ /*ăn tất cả các class text*/
+			color: red;
+		}
+		body h1{/* ăn thẻ h1*/
+			color: green;
+		}
+		body>.text{ /*ăn con chực tiếp*/
+			color: yellow;
+		}  
+		div + .text{ /* ae với nhau ( cùng cấp) + ăn cho thằng ngay sau nó*/
+			color: blue;
+		} 
+		div ~ .text{ /* ae với nhau ( cùng cấp) ~ : là ăn tất cả bên dưới nó;*/
+			color: red;
+		}
+		body p:last-child{
+			color:  violet;
+		}
+		body {
+			background-image: url('../../234.jpg');
+			/*background-repeat: repeat-x; lặp theo chiều ngang x (-y là lặp theo chiều y) */
+			background-repeat: no-repeat ; /*không lặp*/
+			background-attachment: fixed; /*ảnh luôn luôn dữ nguyễn khi mình lăn chuột*/
+			background-position: top right; /*đặt vị trí ảnh ở 4 góc trang*/
+			background-size: 100%;
+		}
+		body h2{
+			color: white;
+		}
+		h2 {
+			font-family: Tohoma , arial;
+			font-style: italic; /*kiểu Style nghiêng*/
+			font-variant: small-caps;
+			font-weight: 100;/*Mô tả cách thể hiện font chữ là thường hay đậm*/
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body style="height: 2000px">
+	<h2 >Đinh Xuân Dương</h1>
+	<p class="text">
+		123456
+	</p>
+	<div> 
+		<h1 id="xinchao">Xin chào</h1>
+		<p class="text">:))</p>
+	</div>
+	<p class="text">
+		Chao xìn
+	</p>
+	<p class="text">
+		HELLO
+	</p>
+	<!--  1 : <h1 id="red" class="green"> hello world</h1>
+	<h2 class="yellow"> hello world</h1> -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+header{
+	display: inline-flex;
+	width: 100%;
+}
+#logo{
+	width: 25%;
+	float: left;
+}
+#logo #img{
+	width: 100%;
+	height: auto;
+
+}
+#menu{
+   width:  75%;
+   
+   font-size: 20px;
+   line-height: 30px;
+   margin-top: 10px;
+}
+#menu #ul1{
+	float: right;
+	list-style: none;
+	padding-left: 20px;
+	
+}
+#menu #ul1 .item1:hover{
+	color:  #FF6600;
+}
+
+#menu #ul1 .item1{
+	display: inline-block;
+	padding-right: 10px;
+}
+  #avt{
+	width: 5%;
+	
+	float: right;
+	 margin-top: 10px;
+}
+ #avt #img-avt{
+	width: 100%;
+	border-radius: 50%;
+
+}
+.clear{
+	clear: both;
+}
+.body-left{
+	width: 20%;
+	float: left;
+	background: #EEEEEE;
+
+}
+.body-left>ul {
+	list-style: none;
+	padding-left: 5px;
+}
+.body-left #ul2 .item2{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+}
+.body-left #ul2 .item2>i{
+	margin-right: 10px;
+}
+.body-left #ul2 .khong{
+	color: #444444;
+	font-size: 20px;
+	background: #CCCCCC;
+}
+.body-left #ul2 .hover:hover{
+	background: #FF6600;
+	color: white;
+}
+.body-left #ul2 #item-cam{
+	background: #FF6600;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#body .body-right{
+	float: left;
+	width: 75%;
+	margin-left: 30px;
+	box-shadow: 0 0 5px 5px #8888;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+.than{
+	margin-left: 50px;
+}

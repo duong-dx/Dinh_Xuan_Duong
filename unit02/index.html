@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+</head>
+<body>
+	<table  bordercolor="blue" width="100%" bgcolor="lavender" border="1px">
+		<tr height="100px">
+			<td  colspan="2">Cột 1</td>
+<!-- 			<td>Cột 2</td> -->
+			<td>Cột 3</td>
+			<td>Cột 4</td>
+			<td>Cột 5</td>
+		</tr>
+		<tr>
+			<td>Cột 1</td>
+			<td>Cột 2</td>
+			<td>Cột 3</td>
+			<td rowspan="2">Cột 4</td>
+			<td>Cột 5</td>
+		</tr>
+		<tr>
+			<td>Cột 1</td>
+			<td>Cột 2</td>
+			<td>Cột 3</td>
+			<!-- <td>Cột 4</td> -->
+			<td>Cột 5</td>
+		</tr>
+		<tr>
+			<td>Cột 1</td>
+			<td rowspan="2" colspan="2">Cột 2</td>
+			<!-- <td rowspan="2">Cột 3</td> -->
+			<td>Cột 4</td>
+			<td>Cột 5</td>
+		</tr>
+		<tr>
+			<td>Cột 1</td>
+			<!-- <td>Cột 2</td>
+			<td>Cột 3</td> -->
+			<td>Cột 4</td>
+			<td>Cột 5</td>
+		</tr>
+	</table>
+
+	<table bordercolor="red" bgcolor="lavender" width="100%" border="1px" align="center">
+		
+		<tr align="center">
+			<td height="100px">1</td>
+			<td colspan="2">2</td>
+			<td>3</td>
+			<td>+</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2"  height="100px">4</td>
+			<td colspan="2">5</td>
+			<td>-</td>
+		</tr>
+		<tr align="center">
+			<td  height="100px">6</td>
+			<td colspan="2">7</td>
+			<td>8</td>
+			<td>x</td>
+		</tr>
+		<tr align="center">
+			<td  height="100px">0</td>
+			<td colspan="3">9</td>
+			<td>:</td>
+		</tr>
+		
+	</table>
+	<form name="login" action="#" method="post">
+		<!-- text ,
+		 date, color,
+		  password,
+		   number,
+		    email ,
+		     url là kiểu  link,
+		     checkbox 
+		     radio
+		     search có dấu x để xóa,
+		     file chọn file,
+		     button phải có valua="adđ"
+		  required = true là bắt buộc phải điền =false là không bắt buộc
+		  readonly chỉ đc đọc không đươc sửa
+		  reset đặt reset ra ngoài form không có tác dụng-->
+		<input type="radio" name="abc">C
+		<input type="radio" name="abc">C++
+		<input type="radio" name="abc">java
+		<br>
+		<input type="checkbox" name="">C
+		<input type="checkbox" name="">C++
+		<input type="checkbox" name="">java
+		<br>
+		<input type="search" name="email" placeholder="Email hoặc số điện thoại" required="true">
+		<input type="password" name="password" placeholder="Password" required="true">
+		<button>Đăng kí</button> <input type="reset" name="Reset">
+		<br>
+		<input type="text" name="" value="add"><br>
+		<textarea name="" required readonly placeholder="Content">  </textarea>
+		<br>
+		<input type="checkbox" checked name="">Java
+		<br>
+		<!-- checked trong check box: mặc định chọn
+		selected trong option : mặc định chọn  
+		mulpite : hiển thị nhiều cái  -->
+		<select name="Thành phố" multiple>
+
+			<option value="1">Hà Nội</option>
+			<option value="2" selected="">TP.Hồ Chí Minh</option>
+			<option value="3">Đà Nẵng</option>
+		</select>
+	</form>
+</body>
+</html>

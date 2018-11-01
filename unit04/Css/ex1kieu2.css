@@ -1,0 +1,95 @@
+.menu{
+	height: 80px;
+	width: 100%;
+	margin :auto;
+	background: #00CC00;
+	position: relative;
+}
+.logo{ 
+	height: 100%;
+	width: 12%;
+	position: absolute;
+	float: left;
+ }
+ .logo>img{
+ 	height: 100%;
+ 	width: 100%;
+
+ }
+  .menu-right{
+  	float: right;
+ 	height: 100%;
+ 	width: 88%;
+ 	
+ 	
+ }
+ .ul1{
+ 	list-style: none;
+ 	line-height: 50px;
+ }
+ .item1{
+ 	display: inline-block;
+ 	padding-right:  15px;
+ 	border-right: 1px white solid;
+ }
+ .item1 .a1{
+ 	text-decoration: none;
+ 	color: white;
+ }
+ .a1:hover{
+ 	color: red;
+ }
+.ul2{
+	
+	list-style: none;
+	width: 200px;
+	margin-top: -4px;
+	position: absolute;
+	display: none;
+	padding-top: 0px;
+	float: left;
+	padding-left: 0px;
+}
+.item2{
+	color: white;
+	height: 60px;
+	border-bottom: 1px white solid;
+	background:  #00FF99;
+
+}
+.logo:hover .ul2{
+	display: block;
+
+}
+.ul3{
+	display: none;
+	width: 120px;
+	position: absolute;
+	list-style: none;
+	background:  #00CC00;
+	float: left;
+	margin-left:  62px;
+}
+.logo .item2:hover .ul3{
+	display:inline-block;
+
+}
+
+
+
+.item3{
+	color: white;
+	padding-top: 20px;
+	border-bottom:  1px solid white ;
+	width: 100%;
+
+}
+.ul2 .item2:hover {
+	background: #00CC00;
+
+}
+.a2{
+	color: white;
+	text-decoration: none;
+	line-height: 60px;
+}
