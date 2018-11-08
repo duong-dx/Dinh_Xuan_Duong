@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	
+</head>
+<body>
+	<table border="1px">
+		<tr class="dong">
+			<td><input type="checkbox" class="check"></td> 
+			<td class="cot2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nulla!</td> 
+		</tr>
+		<tr class="dong">
+			<td><input type="checkbox" class="check"></td> 
+			<td class="cot2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nulla!</td> 
+		</tr>
+		<tr class="dong">
+			<td><input type="checkbox" class="check"></td> 
+			<td class="cot2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nulla!</td> 
+		</tr>
+		<tr class="dong">
+			<td><input type="checkbox" class="check"></td> 
+			<td class="cot2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nulla!</td> 
+		</tr>
+		<tr class="dong">
+			<td><input type="checkbox" class="check"></td> 
+			<td class="cot2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nulla!</td> 
+		</tr>
+		<tr class="dong">
+			<td><input type="checkbox" class="check"></td> 
+			<td class="cot2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nulla!</td> 
+		</tr>
+		
+	</table>
+	<button class="tich" onclick="checkall(this)">CheckAll</button>
+	<button class="bo" onclick="unall(this)">UncheckAll</button>
+	<script type="text/javascript">
+		function checkall() {
+				// body...
+
+				var check = document.getElementsByClassName('check');
+				for (var i =0; i <check.length; i++) {
+					check[i].checked=true;
+				}
+		}
+		function unall(){
+			var uncheck = document.getElementsByClassName('check');
+			for (var i = 0; i < uncheck.length; i++) {
+				uncheck[i].checked=false;
+			}
+		}
+
+		</script>
+	</body>
+	</html>

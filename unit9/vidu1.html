@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+</head>
+<body>
+	<input type="text" id="go"> 
+	<div> </div>
+	
+	<script type="text/javascript">
+		var selector =document.getElementById("go");
+		selector.addEventListener('blur',function(){
+			selector.value = selector.value.toUpperCase()
+		})
+		
+		//tạo mới một thẻ p
+		var p =document.createElement("p");
+		p.innerHTML = 'Xin chào bạn ';
+		document.getElementsByTagName('body')[0].appendChild(p);
+
+		
+	</script>
+</body>
+</html>

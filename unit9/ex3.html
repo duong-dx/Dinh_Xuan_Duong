@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/ex3.css">
+</head>
+<body>
+	<div id="ex3">
+		<div id="head">
+			<input id="tab1" type="button" value="Tab1" class="tab" onclick="tab1()" >
+			<input id="tab2" type="button" value="Tab2" class="tab" onclick="tab2()">
+			<input id="tab3" type="button" value="Tab3" class="tab" onclick="tab3()">
+		</div>
+		<div id="footer">
+			<div class="hienthi" id="a"><p class ="p1">Section 1</p><br>Hi!</div>
+			<div class="hienthi" id="b"><p class ="p1">Section 2</p><br>Chao xìn :3</div>
+			<div id="c" class="hienthi"><p class ="p1">Section 3</p><br>Xin chào  =)))</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function tab1(){
+			 document.getElementById('b').style.display = "none";
+			 document.getElementById('c').style.display = "none";
+			 document.getElementById('a').style.display = "block";
+			 document.getElementById('tab1').style.background= "white";
+			 document.getElementById('tab2').style.background= "grey";
+			 document.getElementById('tab3').style.background= "grey";
+			 document.getElementById('tab1').style.color="black";
+			 document.getElementById('tab2').style.color="white";
+			 document.getElementById('tab3').style.color="white";
+			
+			
+		}
+		function tab2(){
+			document.getElementById('a').style.display = "none";
+			document.getElementById('c').style.display = "none";
+			document.getElementById('b').style.display = "block";
+			document.getElementById('tab2').style.background= "white";
+			 document.getElementById('tab1').style.background= "grey";
+			 document.getElementById('tab3').style.background= "grey";
+			 document.getElementById('tab1').style.color="white";
+			 document.getElementById('tab2').style.color="black";
+			 document.getElementById('tab3').style.color="white";
+			
+			
+		}
+		function tab3(){
+			document.getElementById('a').style.display = "none";
+			document.getElementById('b').style.display = "none";
+			document.getElementById('c').style.display = "block";
+			document.getElementById('tab3').style.background= "white";
+			 document.getElementById('tab2').style.background= "grey";
+			 document.getElementById('tab1').style.background= "grey";
+			 document.getElementById('tab2').style.color="white";
+			 document.getElementById('tab1').style.color="white";
+			 document.getElementById('tab3').style.color="black";
+			
+			
+		}
+
+		
+		
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<style type="text/css">
+		p{
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<p id="abc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nesciunt, deserunt ipsum soluta repellat sint ex deleniti temporibus perferendis placeat.</p>
+	<input type="button" onclick="macdinh()" value="Mặc định"/>
+	<input type="button" onclick="lon()" value="Phóng to"/>
+	<input type="button" onclick="nho()" value="Thu nhỏ"/>
+	<script type="text/javascript">
+		var text = document.getElementById('abc');
+
+		function macdinh(){
+			text.style.fontSize = "16px";
+			
+		}
+		function lon(){
+			var style = window.getComputedStyle(text, null).getPropertyValue('font-size');
+			var fontSize = parseFloat(style) + parseFloat(style)*0.4 ; 
+			text.style.fontSize = fontSize+"px";
+		}
+		function nho(){
+			style = window.getComputedStyle(text,null).getPropertyValue('font-size');
+			fontSize = parseFloat(style) -parseFloat(style)* 0.4;
+			text.style.fontSize=fontSize+"px";
+		}
+
+	</script>
+</body>
+</html>

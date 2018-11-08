@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân dương</title>
+</head>
+<body>
+	<input type="text" value="Thẻ không cần lấy" class="website">
+	<div>
+		<input type="text" value="Thẻ không cần Lấy" class="website"/>
+		<input type="text" value="Thẻ không cần lấy"/>
+	</div>
+	<input type="button" value="CLick me" onclick="change()" id="object" />
+	<p id="text" name="Duong" age="20" school="KMA"></p>
+	<input type="text" name="" id="input">
+	<div id="message">
+		Hello =))
+	</div>
+	<input type="button" value= "Change backgroud" onclick="change_backgroud()">
+	<input type="button" value= "Change color" onclick="change_color()">
+	<input type="button" value ="Change height" onclick="change_height()">
+	<input type="button" value ="Change fontsize" onclick="change_font_size()">
+
+	<script>
+		var selector = document.getElementsByClassName("website");
+
+		selector[0].style.border="1px solid red";
+
+		function change()
+		{
+             // Lấy đối tượng
+             var object = document.getElementById("object");
+
+             // lấy thuộc tính type
+             var type = object.type;
+
+             // kiểm tra thuộc tính type và thay đổi
+             if (type == "button"){
+
+             	object.type = 'text';
+             }
+             else{
+             	object.type = "button";
+             }
+
+         }
+         var a = document.getElementById("text");
+         a.innerHTML = 'Name :' +a.getAttribute('name') + "Age :"+ a.getAttribute('age') + "school :" +a.getAttribute('school')
+         var input = document.getElementById("input");
+         alert(input.getAttribute('type'))
+         function change_background()
+            {
+               document.getElementById("message").style.background = 'red';
+            }
+ 
+            function change_color()
+            {
+               document.getElementById("message").style.color = 'blue';
+            }
+ 
+            function change_height()
+            {
+               document.getElementById("message").style.height = '500px';
+            }
+ 
+            function change_font_size()
+            {
+               document.getElementById("message").style.fontSize = '500px';
+            }
+     </script>
+ </body>
+ </html>

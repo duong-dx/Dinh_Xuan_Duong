@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+</head>
+<body>
+	<button onclick="clickMe()">clickMe</button>
+	<script type="text/javascript">
+		function clickMe(){
+			do{
+				var n = prompt('Nhập vào n số nguyên');
+				var S =0;
+				if (n<=0) {
+					alert('Bạn cần nhập n >0');
+
+				}
+				else{
+					var i =1;
+					do{
+						
+						S = S +i;
+						i++;
+					}while(i<=n)
+					document.write('Kết quả của dãy S = 1 + 2 +...+ n =' +S);
+				}
+			}while(n<=0)
+		}
+	</script>
+</body>
+</html>

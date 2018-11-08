@@ -1,0 +1,41 @@
+
+#b{
+	display: none;
+}
+#c{
+	display: none;
+}
+#tab1{
+	background: white;
+}
+#tab2{
+	background: grey;
+	color: white;
+}
+#tab3{
+	background: grey;
+	color: white;
+}
+#ex3 {
+	width: 50%;
+	margin: auto;
+	background-image: url('../images/go.jpg');
+	padding-bottom: 50px;
+
+}
+#head{
+	padding-top: 30px;
+	margin-left: 10px;
+}
+#footer{
+	padding-top: 10px;
+	margin-left: 10px;
+	margin-right: 20px;
+	padding-bottom: 30px;
+	background: white;
+	padding-left: 20px;
+}
+#footer .p1{
+	font-size: 20px;
+
+}

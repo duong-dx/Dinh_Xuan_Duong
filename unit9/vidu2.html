@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+</head>
+<body>
+	<input id="input" type="text" name="name" placeholder="input here">
+	<button id="add">add</button>
+	<button id="deletee">DELETE ALL</button>
+	<table >
+		<tbody id="content">
+			
+		</tbody>
+		
+	</table>
+	<script type="text/javascript">
+		document.getElementById('add').addEventListener('click',function(){
+			var input = document.getElementById('input');
+			var content = document.getElementById('content');
+			var value = input.value;
+			if(value.trim()==''){
+				alert('Không thể để rỗng =)))')
+			}
+			else{
+				var temp= `<tr>
+				<td>
+				<input type="checkbox" class='check'>`+value+`</td>
+				<td><button class='edit' onclick="editt(this)>Edit</button></td>
+				<td><button class='delete' onclick="del(this)">Delete</button></td>
+				</tr>`
+
+				content.innerHTML += temp;
+				input.value='';
+			}
+		});
+		var dem=0;
+		// if(document.getElementsByClassName('check').value==true){
+			document.getElementById('deletee').addEventListener('click',function(){
+				var inputs= document.getElementsByTagName('input');
+				for (var i = 0; i <inputs.length; i++) {
+					if(inputs[i].checked){
+						inputs[i].parentNode.parentNode.remove();
+						dem++;
+					}
+					
+				}
+					if(dem==0){
+						alert('cần tích')
+					}
+
+				//document.getElementById('content').innerHTML="";
+			})
+		// }
+		function del(a){
+			a.parentNode.parentNode.remove();
+		}
+		
+	</script>
+</body>
+</html>

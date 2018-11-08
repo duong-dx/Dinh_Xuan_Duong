@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Duong</title>
+</head>
+<body>
+	<button onclick="clickMe()">clickMe</button>
+	<script type="text/javascript">
+		function clickMe(){
+			do{
+
+
+				var n = prompt('Nhập vào n :');
+				var m = prompt('Nhập vào m :');
+				
+				var S = 0;
+				if (n>m) {
+					alert('Bạn cần nhập n <=m');
+				}
+				else{
+					var k = prompt('Nhập vào k :');
+					for (var i = n; i <=m; i++) {
+						if (i%k==0) {
+							S = S +i;
+						}	
+					}
+
+					document.write('Tổng các chữ số thuộc đoạn từ n đến m chia hết cho k là :'+S);
+				}
+			}while(n>m)
+		}
+	</script>
+</body>
+</html>
