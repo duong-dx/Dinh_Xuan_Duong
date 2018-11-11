@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<style type="text/css">
+		.tab{
+			background: grey;
+		}
+		.hienthi{
+			display: none;
+			color: white;
+		}
+		.hienthi-active{
+			display: block;
+			background: blue;
+		}
+		.tab-active{
+			background: white;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="ex3">
+		<div id="head">
+			<input id="tab1" type="button" value="Tab1" class="tab tab-active" onclick="tab(1)" >
+			<input id="tab2" type="button" value="Tab2" class="tab" onclick="tab(2)">
+			<input id="tab3" type="button" value="Tab3" class="tab" onclick="tab(3)">
+		</div>
+		<div id="footer">
+			<div class="hienthi hienthi-active" id="ht1"><p class ="p1">Section 1</p><br>Hi!</div>
+			<div class="hienthi" id="ht2"><p class ="p1">Section 2</p><br>Chao xìn :3</div>
+			<div class="hienthi" id="ht3" ><p class ="p1">Section 3</p><br>Xin chào  =)))</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function tab(number) {
+			var key = document.getElementsByClassName('tab-active')[0];
+			key.classList.remove('tab-active');
+			document.getElementById('tab'+number).classList.add('tab-active');
+			var ht=document.getElementsByClassName('hienthi-active')[0];
+			ht.classList.remove('hienthi-active');
+			document.getElementById('ht'+number).classList.add('hienthi-active');
+
+		}
+	</script>
+</body>
+</html>

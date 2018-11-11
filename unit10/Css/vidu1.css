@@ -1,0 +1,38 @@
+#vd1{
+	width: 60%;
+	margin: auto;
+	position: relative;
+}
+.item{
+	width: 100%;
+}
+.item .img{
+	width: 100%;
+	height: auto;
+}
+ #left{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	color: white;
+	width: 30px;
+	height: 30px;
+}
+ #right{
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	color: white;
+	width: 30px;
+	height: 30px;
+}
+.item2{
+	display: none;
+}
+.item3{
+	display: none;
+}
+#vd3>i{
+	color: white;
+
+}

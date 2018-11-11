@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/ex1.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="ex1">
+		<div id="item1" class="item item-active">
+			<img class="img" id="img1" src="images/1.jpg">
+			<div class="div"><h3>Apple</h3></div>
+		</div>
+		<div id="item2" class="item ">
+			<img class="img" id="img2" src="images/2.jpg">
+			<div class="div"><h3>2018 Rolls-Royce Phantom - Headlight Wallpaper</h3></div>
+		</div>
+		<div id="item3" class="item ">
+			<img class="img "  id="img3" src="images/3.jpg">
+			<div class="div"><h3>Apple2</h3></div>
+		</div>
+		<div id="item4" class="item ">
+			<img class="img "  id="img3" src="images/4.jpg">
+			<div class="div"><h3>BMW - i8 Roadster</h3></div>
+		</div>
+		<div id="item5" class="item ">
+			<img class="img "  id="img3" src="images/5.jpg">
+			<div class="div"><h3>2010 Rolls-Royce Phantom</h3></div>
+		</div>
+		<div id="item6" class="item ">
+			<img class="img "  id="img3" src="images/6.jpg">
+			<div class="div"><h3>2016 Rolls-Royce Sweptail 
+				12,8 millions USD</h3></div>
+		</div>
+		<div id="item7" class="item ">
+			<img class="img "  id="img3" src="images/7.jpg">
+			<div class="div"><h3>MacOSX</h3></div>
+		</div>
+		<div id="item8" class="item ">
+			<img class="img "  id="img3" src="images/8.jpg">
+			<div class="div"><h3>Rolls-Royce Phantom -Gold plated carved dragon in Vietnam</h3></div>
+		</div>
+		<button id="left" onclick="left()"><i class="fas fa-caret-left" onclick="left()"></i></button>
+		<button id="right" onclick="right()"><i class="fas fa-caret-right" ></i></button>
+		<div id="button">
+			<button class="bt bt-active" id="bt1" onclick="bt(1)">
+				
+			</button>
+			<button class="bt" id="bt2" onclick="bt(2)"></button>
+			<button class="bt" id="bt3" onclick="bt(3)"></button>
+			<button class="bt" id="bt4" onclick="bt(4)"></button>
+			<button class="bt" id="bt5" onclick="bt(5)"></button>
+			<button class="bt" id="bt6" onclick="bt(6)"></button>
+			<button class="bt" id="bt7" onclick="bt(7)"></button>
+			<button class="bt" id="bt8" onclick="bt(8)"></button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var n = 0; 
+		var m = 0;
+		function bt(number){
+			var key = document.getElementsByClassName('bt-active')[0];
+			key.classList.remove('bt-active');
+			document.getElementById('bt'+number).classList.add('bt-active');
+			var item = document.getElementsByClassName('item-active')[0];
+			item.classList.remove('item-active');
+			document.getElementById('item'+number).classList.add('item-active');
+		}
+
+
+		window.setInterval(function(){ 
+			right(); 
+		}, 10000);
+
+
+		function right(){
+				arrItem = document.getElementsByClassName('item');
+				arrBtn = document.getElementsByClassName('bt');
+				n++;
+				m++;
+				if (n>arrItem.length-1) {
+					n = 0;
+				} 
+				if (m>arrBtn.length-1) {
+					m =0;
+				}
+				for (var i = arrItem.length - 1; i >= 0; i--) {
+					arrItem[i].classList.remove('item-active');
+				}
+				for (var i = arrItem.length - 1; i >= 0; i--) {
+					arrBtn[i].classList.remove('bt-active');
+				}
+				arrItem[n].classList.add('item-active');
+				arrBtn[m].classList.add('bt-active');
+		}
+		function left(){
+				arrItem = document.getElementsByClassName('item');
+				arrBtn = document.getElementsByClassName('bt');
+				n--;
+				m--;
+				if (n<0) {
+					n = arrItem.length-1;
+				} 
+				if (m<0) {
+					m =arrBtn.length-1;
+				}
+				for (var i = arrItem.length - 1; i >= 0; i--) {
+					arrItem[i].classList.remove('item-active');
+				}
+				for (var i = arrItem.length - 1; i >= 0; i--) {
+					arrBtn[i].classList.remove('bt-active');
+				}
+				arrItem[n].classList.add('item-active');
+				arrBtn[m].classList.add('bt-active');
+		}
+	</script>
+</body>
+</html>

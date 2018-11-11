@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/ex2.css">
+</head>
+<body>
+	<div id="EX2" >
+		<form>
+			<table id="table"  cellpadding="10px" align="center">
+
+				<tr height="60px">
+					<td colspan="4" align="center"><h1><font color="Peru">Đăng kí</font></h1></td>
+				</tr>
+				<tr>
+					<td width="200px">Họ và Tên</td>
+					<td><input class="input" id="name" type="text" name="name" placeholder="Nhập họ và tên" ></td>
+					<td colspan="2" width="350px" align="center"><span class="span" id="span1"></span></td>
+				</tr>
+				<tr height="40px">
+					<td>Giới tính</td>
+					<td>
+						<input id="nam" type="radio" value="nam" name="gioitinh">Nam
+						<input id="nu" type="radio" value="nu" name="gioitinh">Nữ
+					</td>
+					<td  align="center" colspan="2"><span class="span" id="span2"></span></td>
+				</tr>
+				<tr height="40px">
+					<td>Email</td>
+					<td><input class="input" id="email" type="email" name="email" placeholder="Nhập địa chỉ email" ></td>
+					<td  align="center" colspan="2"><span  class="span" id="span3"></span></td>
+				</tr>
+				<tr height="40px">
+					<td>Số điện thoại</td>
+					<td><input class="input" id="sdt" type="number" name="sdt" placeholder="Nhập số điện thoại" ></td>
+					<td  align="center" colspan="2"><span  class="span" id="span4"></span></td>
+				</tr>
+				<tr height="40px">
+					<td>Mật khẩu</td>
+					<td><input class="input" id="password1" type="password" name="password1" placeholder="Nhập vào mật khẩu" ></td>
+					<td  align="center" colspan="2"><span  class="span" id="span5"></span></td>
+				</tr height="40px">
+				<tr height="40px">
+					<td>Xác nhận mật khẩu</td>
+					<td><input class="input" id="password2" type="password" name="password2" placeholder="Xác nhận lại mật khẩu"></td>
+					<td  align="center" colspan="2"><span  class="span" id="span6"></span></td>
+				</tr>
+				<tr height="40px">
+					<td colspan="2" align="center"><button id="add" class="bt" >Đăng kí</button></td>
+					<td colspan="2"><button id="clear" class="bt">Restart</button</td>
+					</tr>
+				</table>
+
+
+			</form>
+		</div>
+		<script type="text/javascript">
+			function checkPhoneNumber(phone) {
+				var flag = false;
+
+				phone = phone.replace('(+84)', '0');
+				phone = phone.replace('+84', '0');
+				phone = phone.replace('0084', '0');
+				phone = phone.replace(/ /g, '');
+				if (phone != '') {
+					var firstNumber = phone.substring(0, 2);
+					if ((firstNumber == '09' || firstNumber == '08' || firstNumber == '03'|| firstNumber == '05'|| firstNumber == '02'|| firstNumber == '04'|| firstNumber == '07') && phone.length == 10) {
+						if (phone.match(/^\d{10}/)) {
+							flag = true;
+						}
+					} 
+					return flag;
+				}}
+
+				document.getElementById('add').addEventListener('click',function(e){
+					var dem=0;
+
+					e.preventDefault();
+					var name =document.getElementById('name');
+					if(name.value.trim()==''){
+						var span = document.getElementById('span1');
+						span.innerHTML='Tên không được để trống';
+					}
+					else if(name.value.length<8){
+						var span = document.getElementById('span1');
+						span.innerHTML='Tên phải lớn hơn 8 kí tự';
+					}
+					else{
+						var span = document.getElementById('span1');
+						span.innerHTML='';
+						dem++;
+					}
+					var nam = document.getElementById('nam');
+					var nu = document.getElementById('nu');
+
+					if( nam.checked==false && nu.checked==false){
+						var span2 = document.getElementById('span2');
+						span2.innerHTML='Giới tính không được để trống';
+					}
+					else{
+						var span2 = document.getElementById('span2');
+						span2.innerHTML='';
+						dem++;
+					}
+					var email = document.getElementById('email');
+					var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+					if( email.value.trim()==''){
+						var span3 = document.getElementById('span3');
+						span3.innerHTML='Email không được để trống';
+					} 
+					else if (!filter.test(email.value)) {
+						var span3 = document.getElementById('span3');
+						span3.innerHTML='Email Cần nhập đúng định dạng';
+					}
+					else{
+						var span3 = document.getElementById('span3');
+						span3.innerHTML='';
+						dem++;
+					}
+					var sdt = document.getElementById('sdt');
+					if (sdt.value=='') {
+						var span4 = document.getElementById('span4');
+						span4.innerHTML='Số điện thoại không được để trống';
+					}
+					else if(checkPhoneNumber(sdt.value)==false){
+						var span4 = document.getElementById('span4');
+						span4.innerHTML='Yêu cầu nhập đúng số theo số điện thoại Việt Nam';
+					}
+					else{
+						var span4 = document.getElementById('span4');
+						span4.innerHTML='';
+						dem++;
+					}
+					var password1 = document.getElementById('password1');
+					var password2 = document.getElementById('password2');
+					if (password1.value.trim()=='') {
+						var span5 = document.getElementById('span5');
+						span5.innerHTML='Mật khẩu không được để trống';
+					}
+					else if (password1.value.length < 8){
+						var span5 = document.getElementById('span5');
+						span5.innerHTML='Mật khẩu không được nhỏ hơn 8 kí tự';
+					}
+					else {
+						var span5 = document.getElementById('span5');
+						span5.innerHTML='';
+						dem++;
+					}
+					if (password2.value.trim()=='') {
+						var span6 = document.getElementById('span6');
+						span6.innerHTML='Mật khẩu không được để trống';
+					}
+					else if (password2.value!=password1.value){
+						var span6 = document.getElementById('span6');
+						span6.innerHTML='Mật khẩu Nhập lại phải khớp mật khẩu trên';
+					}
+					else {
+						var span6 = document.getElementById('span6');
+						span6.innerHTML='';
+						dem++;
+					}
+					if(dem==6){
+						alert('Đăng kí thành công');
+					}
+
+				})
+				document.getElementById('clear').addEventListener('click',function(a){
+					a.preventDefault();
+					var name =document.getElementById('name');
+					name.value='';
+					var span = document.getElementById('span1');
+					span.innerHTML='';
+
+
+					var nam = document.getElementById('nam');
+					var nu = document.getElementById('nu');
+					nam.checked=false;
+					nu.checked=false;
+					span2.innerHTML='';
+					
+
+
+
+					var email = document.getElementById('email');
+					email.value='';
+					var span3 = document.getElementById('span3');
+					span3.innerHTML='';
+
+
+					var sdt = document.getElementById('sdt');
+					sdt.value='';
+					var span4 = document.getElementById('span4');
+					span4.innerHTML='';
+
+					var password1 =document.getElementById('password1');
+					password1.value='';
+					var span5 = document.getElementById('span5');
+					span5.innerHTML='';
+
+					var password2 =document.getElementById('password2');
+					password2.value='';
+					var span6 = document.getElementById('span6');
+					span6.innerHTML='';
+
+
+				})
+			</script>
+		</body>
+		</html>

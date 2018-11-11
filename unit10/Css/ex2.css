@@ -1,0 +1,28 @@
+#EX2{
+	background-image: url(../images/4.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 80%;
+	margin: auto;
+	height: 780px;
+	color:#660066;
+}
+#table .input{
+	width: 450px;
+	height: 30px;
+}
+#table .span{
+	
+	font-size: 18px;
+
+}
+#table{
+	font-size: 18px;
+	margin-top: 50px;
+}
+#table .bt{
+	background: #660000;
+	color: white;
+	height: 40px;
+	border-radius: 20px;
+}
