@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/ex1.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="ex1">
+		<div id="head">
+			<h1>My To Do List</h1>
+			<input  type="text" id="input" placeholder="Mời nhập công việc...">
+			<button onclick="add" id="add" >ADD</button>
+
+			<div class="clear"></div>
+			
+		</div>
+		<div id="chua-tb">
+			<table id="table" cellspacing="0">
+				<tbody id="content">
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" >
+		$(function(){
+			$('#add').on('click',function(){
+				var input = $('#input').val();
+				if(input.trim()==''){
+					alert('Vui lòng nhập công việc')
+				}
+				else{
+					$('#table').prepend(
+						`<tr class="hang"  >
+						<td class="cot1" width="200px" align="center"></td>		
+						<td class="cot2" width="400px" >`+input+`</td>
+						<td class="cot3" width="200px" align="center">
+						<i class="fas fa-times delete"></i>
+						</td>
+						</tr>`
+						)
+				}
+				$('#input').val('');
+				$('.hang').css({'font-size':'20px'})
+				
+
+			})
+			//delete hàng
+			$('#content').on('click','.delete',function(){
+				$(this).parent().parent().remove();
+			})
+			//cột 2
+				$('#content').on('click','.cot2',function(){
+					var text =$('.cot1').val();
+					if($(this).prev().html()==""){
+					$(this).prev().html('<i class="fas fa-check"></i>');
+					$(this).parent().css({'background':'grey','color':'white'})	;
+					$(this).css('text-decoration','line-through')
+				}
+				else{
+					$(this).prev().html('');
+					$(this).parent().css({'background':'white','color':'black'})	;
+					$(this).css('text-decoration','none')	
+				}
+			})
+				//cột 1
+				$('#content').on('click','.cot1',function(){
+					var text =$(this)
+
+					if($(this).html()==''){
+						text.html('<i class="fas fa-check"></i>');
+						$(this).parent().css({'background':'grey','color':'white'})	;
+						$(this).next().css('text-decoration','line-through')
+					}
+					else{
+						text.html('');
+						$(this).parent().css({'background':'white','color':'black'});
+						text.next().css('text-decoration','none')
+					}
+				})
+				//cột3
+				$('#content').on('click','.cot3',function(){
+					var text =$('.cot1').val();
+
+					if($(this).prev().prev().html()==''){
+						$(this).prev().prev().html('<i class="fas fa-check"></i>');
+						$(this).parent().css({'background':'grey','color':'white'})	;
+						$(this).prev().css('text-decoration','line-through')
+					}
+					else{
+						$(this).prev().prev().html('');
+						$(this).parent().css({'background':'white','color':'black'});
+						$(this).prev().css('text-decoration','none')
+					}
+				})
+			})
+		
+		</script>
+	</body>
+	</html>

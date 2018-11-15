@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/test.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<div id="ex2">
+		<div id="head">
+			<span id="span1">Akordeon </span><font color="#33CC00">Vector PSD</font><br>
+			<font color="#33CC00"><i class="fas fa-arrow-right"></i></font> A stylo moders accodions
+		</div>
+		<div class="item">
+			<button class="tab"><i class="fas fa-plus"></i></button>
+			<div class="div">
+				<span class="sp span ">Expanded Panel</span>
+				<span class="sp span2-active">This is an expanded panel</span>
+			</div>
+		</div>
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur earum ut perferendis labore ipsam quasi maiores consectetur necessitatibus optio dicta id, esse excepturi! Explicabo veniam obcaecati, id deleniti facere, maxime?</div>
+
+		<div class="item">
+			<button class="tab"><i class="fas fa-plus"></i></button>
+			<div class="div">
+				<span class="sp span ">Second Panel</span>
+				<span class="sp span2-active">This is an Second Panel</span>
+			</div>
+		</div>
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur earum ut perferendis labore ipsam quasi maiores consectetur necessitatibus optio dicta id, esse excepturi! Explicabo veniam obcaecati, id deleniti facere, maxime?</div>
+
+		<div class="item">
+			<button class="tab"><i class="fas fa-plus"></i></button>
+			<div class="div">
+				<span class="sp span ">Third Panel</span>
+				<span class="sp span2-active">This is an Third Panel</span>
+			</div>
+		</div>
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur earum ut perferendis labore ipsam quasi maiores consectetur necessitatibus optio dicta id, esse excepturi! Explicabo veniam obcaecati, id deleniti facere, maxime?</div>
+
+		<div class="item">
+			<button class="tab"><i class="fas fa-plus"></i></button>
+			<div class="div">
+				<span class="sp span ">Fourth Panel</span>
+				<span class=" sp span2-active">This is an Fourth Panel</span>
+			</div>
+		</div>
+		<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur earum ut perferendis labore ipsam quasi maiores consectetur necessitatibus optio dicta id, esse excepturi! Explicabo veniam obcaecati, id deleniti facere, maxime?</div>
+	</div>
+	<!-- <i class="fas fa-minus"></i> -->
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			//Đây là jquery cho sự kiện click vào button:
+			$('.tab').on('click',function(){
+				//hiện
+				$('.content').css('display','none');
+				$('.div .span2-active').css('display','none');
+				$('.div .span').css('display','inline-block')
+				if($(this).html()=='<i class="fas fa-plus"></i>'){
+					$('.tab').html('<i class="fas fa-plus"></i>');
+					$(this).next().children('.span').css('display','none');
+					$(this).next().children('.span2-active').css('display','inline-block');
+					$(this).parent().next().css('display','block');
+					
+					$(this).html('<i class="fas fa-minus"></i>');
+				}
+				//ẩn
+				else if($(this).html()=='<i class="fas fa-minus"></i>') {
+					$(this).html('<i class="fas fa-plus"></i>');
+					$(this).parent().next().css('display','none');
+					$(this).next().children('.span').css('display','inline-block');
+					$(this).next().children('.span2-active').css('display','none');
+					$('.tab').html('<i class="fas fa-plus"></i>');
+				}
+			})
+			//Trong đề chỉ yêu cầu click vào button 
+			//em là thêm cái này nhé :
+			//Đây là jquery cho sự kiện click vào cả dòng :
+			$('.div').on('click',function(){
+				$('.content').css('display','none');
+				$('.div .span2-active').css('display','none');
+				$('.div .span').css('display','inline-block')
+				if ($(this).prev().html()==='<i class="fas fa-plus"></i>') {
+					$('.tab').html('<i class="fas fa-plus"></i>');
+					$(this).prev().html('<i class="fas fa-minus"></i>');
+					$(this).parent().next().css('display','block');
+					$(this).children('.span').css('display','none');
+					$(this).children('.span2-active').css('display','inline-block');
+				}
+				else{
+					$(this).prev().html('<i class="fas fa-plus"></i>');
+					$(this).parent().next().css('display','none');
+					$(this).children('.span').css('display','inline-block');
+					$(this).children('.span2-active').css('display','none');
+
+				}
+			})
+
+		})
+	</script>
+</body>
+</html>

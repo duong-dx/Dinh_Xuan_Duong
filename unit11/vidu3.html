@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+</head>
+<body>
+	
+	<input type="" name="" id="input">
+	<button id="add">ADD</button>
+	<button id="delete-all">Delete All</button>
+	<button id="toggle-check">Toggle Check</button>
+	
+	<table>
+		<tbody id="content">
+			
+
+		</tbody>
+	</table>
+	
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var j =1;
+			$('#add').click(function(){
+				var input = $('input').val()
+				$('table').prepend(`<tr id="`+j +`">
+				<td>
+					<input type="checkbox" name=""
+				class="checkbox">
+				</td>
+				<td>`
+					+input+`
+				</td>
+				<td>
+					<button content=`+input+` class="edit">Edit</button>
+				</td>
+				<td>
+					<button class="delete">Delete</button>
+				</td>
+				
+			</tr>`)
+				$('#input').val('');
+				j++;
+			})
+			$('#content').on('click','.delete',function(){
+				$(this).parent().parent().remove();
+			})
+
+			$('#toggle-check').on('click',function(){
+				var checkbox = $('.checkbox');
+				for (var i = checkbox.length - 1; i >= 0; i--) {
+					checkbox[i].checked= !checkbox[i].checked;
+					// if(checkbox[i].checked==true){
+					// 	checkbox[i].checked=false;
+					// }
+					// else{
+					// 	checkbox[i].checked=true;
+					// }
+				}
+			})
+			var dem=0;
+			$('#delete-all').on('click',function(){
+				var checkbox = $('.checkbox')
+				for (var i = checkbox.length - 1; i >= 0; i--) {
+					if (checkbox[i].checked==true) {
+						checkbox[i].parent().parent().remove();
+						dem++;
+
+					}
+				}
+				if(dem==0){
+					alert('Yêu cầu check!!!')
+				}
+			})
+			$('#content').on('click','.edit',function(){
+				var content = $(this).attr('content');
+				$(this).
+				$('#input').val(content);
+				$('#add').text('Update').attr('id','update');
+				$('#update').on('click',function(){
+					var input2 = $('#update').val();
+
+				})
+				
+
+			})
+		})
+	</script>
+</body>
+</html>

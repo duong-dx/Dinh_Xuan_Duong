@@ -1,0 +1,64 @@
+body{
+	background: #222222;
+	color: white;
+	
+	width:90%;
+	margin: auto;
+	height: 850px;
+
+
+}
+#head{
+	text-align: center;
+	font-size: 40px;
+	font-family: cursive , Lucida Console;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+#span1{
+	font-size: 80px;
+}
+#ex2{
+	width: 80%;
+	margin: auto;
+
+}
+
+
+
+#ex2 .item{
+	border: 1px black solid;
+	height: 5%;
+}
+.item>button{
+	height: 60px;
+	width: 10%;
+	background: #00CC00;
+	cursor: pointer;
+	border: 0px;
+	color: white;
+	font-size: 20px;
+}
+.item .div{
+	display: inline-block;
+	font-size: 30px;
+	width: 89%;
+	cursor: pointer;
+}
+.content{
+	border:1px black solid;
+	display: none;
+	padding-left: 10%;
+	
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: 25px;
+	cursor: pointer;
+}
+.item .span2-active{
+	display: none;
+
+}
+.item .sp{
+	padding-left: 50px;
+}

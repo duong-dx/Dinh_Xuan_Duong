@@ -57,21 +57,20 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		var n = 0; 
+		var n=0
 		var m = 0;
-		function bt(number){
+		function bt(n){
 			var key = document.getElementsByClassName('bt-active')[0];
 			key.classList.remove('bt-active');
-			document.getElementById('bt'+number).classList.add('bt-active');
+			document.getElementById('bt'+n).classList.add('bt-active');
 			var item = document.getElementsByClassName('item-active')[0];
 			item.classList.remove('item-active');
-			document.getElementById('item'+number).classList.add('item-active');
+			document.getElementById('item'+n).classList.add('item-active');
+			return n;
 		}
 
 
-		window.setInterval(function(){ 
-			right(); 
-		}, 10000);
+		
 
 
 		function right(){
@@ -93,6 +92,7 @@
 				}
 				arrItem[n].classList.add('item-active');
 				arrBtn[m].classList.add('bt-active');
+				return n;
 		}
 		function left(){
 				arrItem = document.getElementsByClassName('item');
@@ -113,7 +113,11 @@
 				}
 				arrItem[n].classList.add('item-active');
 				arrBtn[m].classList.add('bt-active');
+				return n;
 		}
+		window.setInterval(function(){ 
+			right(); 
+		}, 3000);
 	</script>
 </body>
 </html>

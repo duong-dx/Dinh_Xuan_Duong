@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<style type="text/css">
+		div{
+			width: 500px;
+			height: 500px;
+			background: red;
+			padding-left: 20px;
+		}
+		p{
+			background: white;
+			border: 5px solid grey;
+		}
+		.hh{
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, magni!</p>
+		<h2>xxxxxxxxxxxxxxxxxxxxxxx</h2>
+	</div>
+	<input type="text" name="">
+	<h1 class="hh">HELLO</h1>
+	<button id="bt">Click me</button>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').width();
+			500
+			$('p').innerWidth();
+			490
+			$('p').outerWidth();
+			$('h1').html('<p> Xin chào </p>')
+			//$('input').val('8').css('color','red').css('height','60px')kiểu 1
+			$('input').val('8').css({'color':'blue','height':'80px'}) //kiểu 2
+			//$('div').empty(); //xóa tất cả bên trong thẻ
+			$('h1').append('<h4>Xuân Dương</h4>');//bên trong thẻ
+			$('h1').prepend('<h5>=))</h5>'); //bên trong thẻ
+			$('h1').after('<h5>:))</h5>');//bên ngoài đnăg sau
+			$('h1').before('<h2>............</h2>');//bên ngoài phía trước
+			$('h2').addClass('hh');
+			// $('#bt').click(function(){
+			// 	alert('Xuân Dương');
+			// })
+			// $('#bt').on('click',function(){
+			// 	alert('thật vl');
+			// })
+			$('body').on('click','#bt',function(){
+				alert('Thật vi diệu')
+			})
+
+		})
+	</script>
+
+</body>
+</html>

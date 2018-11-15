@@ -1,0 +1,33 @@
+#ex2{
+	width: 80%;
+	margin: auto;
+}
+.item >span{
+	font-size: 30px;
+
+
+}
+.item{
+	border:1px solid;
+	
+}
+.item>button{
+	height: 60px;
+	width: 60px;
+}
+.content{
+	border:1px solid;
+	display: none;
+	padding-left: 5%;
+	height: 150px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 25px;
+}
+.item .span2-active{
+	display: none;
+
+}
+.item .sp{
+	padding-left: 50px;
+}
