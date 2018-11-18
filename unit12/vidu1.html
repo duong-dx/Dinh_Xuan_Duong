@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<style type="text/css">
+		#section{
+			width: 50%;
+			height: 200px;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="section"></div>
+	<input id="show" type="button" value="Show">
+	<input id="hide" type="button" value="Hide">
+	<input id="toogle" type="button" value="Toogle">
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$('#show').on("click",function(){
+			$('#section').show(1000);
+			
+		})
+		$('#hide').on("click",function(){
+			$('#section').hide(1000);
+
+		})
+		$('#toogle').on("click",function(){
+			$('#section').toggle(1000,alert('In ra gì đấy'));
+
+		})
+	</script>
+</body>
+</html>

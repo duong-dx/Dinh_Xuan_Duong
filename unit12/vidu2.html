@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="div">
+		<p>Thẻ p</p>
+		<span> Thẻ Span</span>
+		<ul id="ul">
+			<li>Thẻ L1</li>
+			<li>Thẻ L2</li>
+			<li class="choose">Thẻ L3</li>
+			<li>Thẻ L4</li>
+			<li>Thẻ L5</li>
+		</ul>
+	</div>
+	<input id="section" type="button" value="ClickMe" >
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#section').on('click',function(){
+				$('#div').children().eq(1).css("color","red");
+				//$('#ul').children().filter('.choose').css('color','green') chonj nó
+				$('#ul').children().not('.choose').css('color','green') // trừ cái đó
+
+			})
+		})
+	</script>
+</body>
+</html>

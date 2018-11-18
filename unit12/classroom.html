@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<style type="text/css">
+		#section{
+			width: 50%;
+			height: 200px;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="section"></div>
+				<p><b>IPHONE 6</b></p>
+	Bộ nhớ :<select id="size" name="size" >
+				<option value="16">16GB</option>
+				<option value="32">32GB</option>
+				<option value="64">64GB</option>
+			</select>
+			<div id="price">
+				Giá là : 5.000.000 VNĐ
+			</div>
+			
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#section').on('mouseenter',function(){
+				$('#section').css('background-color','green');
+
+			})
+			$('#section').on('mouseleave',function(){
+				$('#section').css('background-color','black');
+
+			})
+			$('#size').on('change',function(){
+				var value = $(this).val();
+				if(value==16){
+					$('#price').text('Giá là 5.000.000 VNĐ')
+				}
+				if(value==32){
+					$('#price').text('Giá là 6.000.000 VNĐ')
+				}
+				if(value==64){
+					$('#price').text('Giá là 7.000.000 VNĐ')
+				}
+				
+			})
+
+		})
+	</script>
+
+</body>
+</html>

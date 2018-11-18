@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/ex1.css">
+</head>
+<body>
+	<div id="head">
+		<div id="head-left"><p>Jquery Steps</p></div>
+		<div id="head-right">
+			<ul id="ull">
+				<li  class="li">Getting Started</li>
+				<li id="example" class="li">Example</li>
+				<li  class="li">Documentation</li>
+				<li  class="li">Bootgird</li>
+				<li  class="li">Blog</li>
+				<li  class="li">GitHub</li>
+				<li  class="li">About</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="body1">
+		<span id="p1">Example</span>
+		<p id="p2">
+			See how beautiful jQuery Steps is and what you can do with it!
+		</p>
+	</div>
+	<div id="body">
+		<div id="body-left">
+			<ul id="ul">
+				<li class="item-left">Basic Example</li>
+				<li class="item-left if-active">Basic Form Example</li>
+				<li class="item-left">Advanced Form Example</li>
+				<li class="item-left">Tabs Example</li>
+				<li class="item-left">Vertical Steps Example</li>
+				<li class="item-left">Async Content Loading Example</li>
+			</ul>
+		</div>
+		<div id="body-right">
+			<h1>Basic Form Example</h1>
+			<div id="head-body">
+				<button id="item1" class="item-body item-active">1. Account</button>
+				<button id="item2" class="item-body">2. Profile</button>
+				<button id="item3" class="item-body">3. Hints</button>
+				<button id="item4" class="item-body">4. Finish</button>
+				<div class="clear"></div>
+			</div>
+			<div id="content-body">
+				<div class="ct ct-active">
+					<div class="content">
+						
+						<span class="span-active">User name *</span>
+						<span class="span-none">This field is required.</span><br>
+						<input class="input" type="text" name="name">
+						
+						
+					</div>
+					<div class="content">
+						
+						<span class="span-active">Password *</span>
+						<span class="span-none">This field is required.</span><br>
+						<input class="input" type="password" name="password">
+						
+						
+					</div>
+					<div class="content">
+						
+						<span class="span-active">Confirm Password *</span>
+						<span class="span-none">This field is required.</span>
+						<span id="cf-pass" class="span-none">Please enter the same value again.</span><br>
+						<input class="input" type="password" name="confirmpassword">
+						
+						
+
+					</div>
+					<h2>(*) Mandatory</h2>
+					<div class="body-footer">
+						<button id="next1" class="footer next">Next</button>
+						<button id="prev1" class="footer previous">Previous</button>
+						<div class="clear"></div>
+					</div>
+
+
+				</div>
+				<div class="ct atv">
+					<div class="content">
+						<span class="span-active">First name *</span>
+						<span class="span-none">This field is required.</span><br>
+						<input class="input" type="text" name="firstname">
+					</div>
+					<div class="content">
+						<span class="span-active">Last Name *</span>
+						<span class="span-none">This field is required.</span><br>
+						<input class="input" type="text" name="lastname">
+					</div>
+					<div class="content">
+						<span class="span-active">Email *</span>
+						<span class="span-none">This field is required.</span>
+						<span id="checkEmail" class="span-none">Please enter a valid email address.</span><br>
+						<input class="input" type="text" name="email">			
+					</div>
+					<div class="content">
+						<span class="span-active">Address *</span>
+						<span class="span-none">This field is required.</span><br>
+						<input class="input" type="text" name="address">
+					</div>
+					<h2>(*) Mandatory</h2>
+					<div class="body-footer">
+						<button id="next2"  class="footer next">Next</button>
+						<button id="prev2" class="footer previous">Previous</button>
+
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="ct ct3">
+					
+					<ul>
+						<li>Foo</li>
+						<li>Bar</li>
+						<li>FooBar</li>
+					</ul>
+					<div class="body-footer">
+						<button id="next3" class="footer next">Next</button>
+						<button id="prev3" class="footer previous">Previous</button>
+
+						<div class="clear"></div>
+					</div>
+					
+				</div>
+				<div class="ct ct3 a">
+					<span class="span-none">This field is required</span>
+					<input id="ckeckbox" type="checkbox" >
+					<span>I agree with the Terms and Conditions.</span>
+					<div class="body-footer">
+						<button id="next4"   class="footer next">Finish</button>
+						<button id="prev4" class="footer previous">Previous</button>
+						<div class="clear"></div>
+					</div>
+				</div>
+				
+			</div>
+
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var dem=0;
+			var n=0;
+			var check=false;
+			$('#next1').on('click',function(){
+				 dem =0;
+				
+				if($(this).parent().parent().children().eq(0).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(0).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(0).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(0).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(0).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(0).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(0).children().eq(3).css('color','black')
+					
+				}
+
+				if($(this).parent().parent().children().eq(1).children().eq(3).val()==''){
+
+					$(this).parent().parent().children().eq(1).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(1).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(1).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(1).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(1).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(1).children().eq(3).css('color','black')
+					
+				}
+
+				if($(this).parent().parent().children().eq(2).children().eq(4).val()==''){
+
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(2).children().eq(4).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(2).children().eq(4).css('color','#8a609a')
+					
+					dem++;
+				}
+				else if($(this).parent().parent().children().eq(2).children().eq(4).val()!= $(this).parent().parent().children().eq(1).children().eq(3).val()){
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(2).css('display','inline-block')
+					
+					dem++;
+					
+				}
+				else{
+
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(2).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(4).css('background','white');
+					$(this).parent().parent().children().eq(2).children().eq(4).css('color','black')
+					
+					
+				}
+				if (dem>0) {
+					$(this).parent().parent().parent().prev().children().eq(0).css('background','red')
+				}
+				else if(dem==0){
+					$(this).parent().parent().parent().prev().children().eq(0).css('background','#2184be')
+					$(this).parent().parent().hide(2000)
+					$(this).parent().parent().next().show(2000);
+					$(this).parent().parent().parent().prev().children().eq(0).css('opacity','0.5')
+					$(this).parent().parent().parent().prev().children().eq(1).css('background','#2184be')
+				}
+			})
+
+			$('#next2').on('click',function(){
+				dem=0;
+				
+				// $(this).parent().parent().parent().prev().children().eq(1).css('background','red')
+				if($(this).parent().parent().children().eq(0).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(0).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(0).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(0).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(0).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(0).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(0).children().eq(3).css('color','black')
+					
+				}
+				if($(this).parent().parent().children().eq(1).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(1).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(1).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(1).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(1).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(1).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(1).children().eq(3).css('color','black')
+					
+				}
+				if($(this).parent().parent().children().eq(2).children().eq(4).val()==''){
+
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(2).children().eq(4).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(2).children().eq(4).css('color','#8a609a')
+					
+					dem++;
+				}
+				else{
+
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(2).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(4).css('background','white');
+					$(this).parent().parent().children().eq(2).children().eq(4).css('color','black')
+					
+					
+				}
+				if($(this).parent().parent().children().eq(3).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(3).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(3).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(3).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(3).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(3).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(3).children().eq(3).css('color','black')
+				}
+				if (dem>0) {
+					$(this).parent().parent().parent().prev().children().eq(1).css('background','red')
+				}
+				else if(dem==0){
+					$(this).parent().parent().parent().prev().children().eq(1).css('background','#2184be')
+					$(this).parent().parent().hide(2000)
+					$(this).parent().parent().next().show(2000);
+					$(this).parent().parent().parent().prev().children().eq(1).css('opacity','0.5')
+					$(this).parent().parent().parent().prev().children().eq(2).css('background','#2184be')
+				}
+
+			})
+			$('#prev2').on('click',function(){
+				dem=0;
+				// $(this).parent().parent().parent().prev().children().eq(1).css('background','red')
+				if($(this).parent().parent().children().eq(0).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(0).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(0).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(0).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(0).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(0).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(0).children().eq(3).css('color','black')
+					
+				}
+				if($(this).parent().parent().children().eq(1).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(1).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(1).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(1).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(1).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(1).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(1).children().eq(3).css('color','black')
+					
+				}
+				if($(this).parent().parent().children().eq(2).children().eq(4).val()==''){
+
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(2).children().eq(4).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(2).children().eq(4).css('color','#8a609a')
+					
+					dem++;
+				}
+				else{
+
+					$(this).parent().parent().children().eq(2).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(2).css('display','none')
+					$(this).parent().parent().children().eq(2).children().eq(4).css('background','white');
+					$(this).parent().parent().children().eq(2).children().eq(4).css('color','black')
+					
+					
+				}
+				if($(this).parent().parent().children().eq(3).children().eq(3).val()==''){
+					$(this).parent().parent().children().eq(3).children().eq(1).css('display','inline-block')
+					$(this).parent().parent().children().eq(3).children().eq(3).css('background','#fbe3e4');
+					$(this).parent().parent().children().eq(3).children().eq(3).css('color','#8a609a')
+					dem++;
+					
+				}
+				else{
+					$(this).parent().parent().children().eq(3).children().eq(1).css('display','none')
+					$(this).parent().parent().children().eq(3).children().eq(3).css('background','white');
+					$(this).parent().parent().children().eq(3).children().eq(3).css('color','black')
+				}
+				if (dem>0) {
+					$(this).parent().parent().parent().prev().children().eq(1).css('background','red')
+				}
+				else if(dem==0){
+					$(this).parent().parent().parent().prev().children().eq(1).css('background','#2184be')
+					$(this).parent().parent().hide(2000)
+					$(this).parent().parent().prev().show(2000);
+					$(this).parent().parent().parent().prev().children().eq(1).css('opacity','0.5')
+					$(this).parent().parent().parent().prev().children().eq(0).css('background','#2184be')
+					$(this).parent().parent().parent().prev().children().eq(0).css('opacity','1')
+				}
+
+			})
+			$('#prev3').on('click',function(){
+				
+					$(this).parent().parent().hide(2000)
+					$(this).parent().parent().prev().show(2000);
+					$(this).parent().parent().parent().prev().children().eq(2).css('opacity','0.5')
+					$(this).parent().parent().parent().prev().children().eq(1).css('background','#2184be')
+					$(this).parent().parent().parent().prev().children().eq(1).css('opacity','1')
+			})
+			$('#next3').on('click',function(){
+					$(this).parent().parent().hide(2000)
+					$(this).parent().parent().next().show(2000);
+					$(this).parent().parent().parent().prev().children().eq(2).css('opacity','0.5')
+					$(this).parent().parent().parent().prev().children().eq(3).css('background','#2184be')
+					$(this).parent().parent().parent().prev().children().eq(3).css('opacity','1')
+			})
+			$('#next4').on('click',function(){
+				dem=0;
+				if($('#ckeckbox').prop('checked') == false){
+					$(this).parent().prev().prev().prev().css('display','inline-block');
+					$(this).parent().parent().parent().prev().children().eq(3).css('background','red')
+					dem++;
+				}
+				else{
+					$(this).parent().parent().children().eq(0).css('display','none');
+					$(this).parent().parent().parent().prev().children().eq(3).css('background','#2184be')
+					
+				}
+			})
+			$('#prev4').on('click',function(){
+				check=false
+				dem=0;
+				if($('#ckeckbox').prop('checked') == false){
+					$(this).parent().parent().children().eq(0).css('display','inline-block');
+					$(this).parent().parent().parent().prev().children().eq(3).css('background','red')
+					dem++;
+				}
+				
+				else {
+					$(this).parent().parent().children().eq(0).css('display','none');
+					$(this).parent().parent().parent().prev().children().eq(3).css('background','#2184be')
+						$(this).parent().parent().hide(2000)
+					$(this).parent().parent().prev().show(2000);
+					$(this).parent().parent().parent().prev().children().eq(3).css('opacity','0.5')
+					$(this).parent().parent().parent().prev().children().eq(2).css('background','#2184be')
+					$(this).parent().parent().parent().prev().children().eq(2).css('opacity','1')
+					
+				}
+				
+			})
+		})
+	</script>
+</body>
+</html>
