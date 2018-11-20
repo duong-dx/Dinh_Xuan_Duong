@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xuân Dương</title>
+	<link rel="stylesheet" type="text/css" href="Css/test.css">
+	
+	
+	
+</head>
+<body>
+	<div class="wraper">
+		<div id="head">
+			<div id="head-left"><p>Jquery Steps</p></div>
+			<div id="head-right">
+				<ul id="ull">
+					<li  class="li">Getting Started</li>
+					<li id="example" class="li">Example</li>
+					<li  class="li">Documentation</li>
+					<li  class="li">Bootgird</li>
+					<li  class="li">Blog</li>
+					<li  class="li">GitHub</li>
+					<li  class="li">About</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="body1">
+			<span id="p1">Example</span>
+			<p id="p2">
+				See how beautiful jQuery Steps is and what you can do with it!
+			</p>
+		</div>
+		<div id="body">
+			<div id="body-left">
+				<ul id="ul">
+					<li class="item-left">Basic Example</li>
+					<li class="item-left ">Basic Form Example</li>
+					<li class="item-left">Advanced Form Example</li>
+					<li class="item-left if-active">Tabs Example</li>
+					<li class="item-left">Vertical Steps Example</li>
+					<li class="item-left">Async Content Loading Example</li>
+				</ul>
+
+			</div>
+			<div id="body-right">
+				<h1>Basic Form Example</h1>
+				<hr color="grey">
+				<div id="head-body">
+					<button id="item1" class="item-body item-active">1. Account</button>
+					<button id="item2" class="item-body">2. Profile</button>
+					<button id="item3" class="item-body">3. Warning</button>
+					<button id="item4" class="item-body">4. Finish</button>
+					<div class="clear"></div>
+				</div>
+				<div id="content-body">
+					<div id="tab1" class="ct ct-active">
+						<h1>Account Information</h1>
+						<hr class="hr">
+						<div class="content">
+							<span class="span-active">User name *</span>
+							<span id="checkUserName" class="span"></span><br>
+							<input id="username" class="input" type="text" name="name" onkeyup="checkTab1()">
+						</div>
+						<div class="content">
+							<span class="span-active">Password *</span>
+							<span id="checkPassword" class="span"></span><br>
+							<input id="password" class="input" type="password" name="password"onkeyup="checkTab1()">
+						</div>
+						<div class="content">
+							<span class="span-active">Confirm Password *</span>
+							<span id="checkRePassword" class="span"></span>
+							<br>
+							<input id="repassword" class="input" type="password" name="confirmpassword" onkeyup="checkTab1()">
+						</div>
+						<h2>(*) Mandatory</h2>
+					</div>
+
+
+					<div id="tab2" class="ct">
+						<h1>Profile Information</h1>
+						<hr class="hr">
+						<div class="content">
+							<span class="span-active">First name *</span>
+							<span id="checkFirstName" class="span"></span><br>
+							<input id="firstname" class="input" type="text" onkeyup="checkTab2()">
+						</div>
+						<div class="content">
+							<span class="span-active">Last Name *</span>
+							<span id="checkLastName" class="span"></span><br>
+							<input id="lastname" class="input" type="text" onkeyup="checkTab2()">
+						</div>
+						<div class="content">
+
+							<span class="span-active">Email *</span>
+							<span id="checkEmail" class="span"></span>
+							<br>
+							<input id="email" class="input" type="email" onkeyup="checkTab2()">
+						</div>
+						<div class="content">
+
+							<span class="span-active">Address</span>
+							<br>
+							<input id="address" class="input" type="text">
+						</div>
+						<div class="content">
+							<span class="span-active">Age *</span>
+							<span id="checkAge" class="span"></span>
+							<br>
+							<input id="age" class="input" type="number" onkeyup="checkTab2()">
+						</div>
+						<h2>(*) Mandatory</h2>
+					</div>
+					<div id="tab3" class="ct ct3">
+						<h1>You are to young</h1>
+						<hr class="hr">
+						<h4>Learn go grandchildren =)))</h4>
+					</div>
+					<div id="tab4" class="ct ct3">
+						<h1>Terms and Conditions</h1>
+						<hr class="hr">
+						<span class="span" id="check"></span><input id="checkbox" type="checkbox" onchange="checkTab4()"> I agree with the Terms and Conditions.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="body-footer">
+			<button id="next" class="footer next">Next</button>
+			<button id="prev" class="footer previous">Previous</button>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+</body>
+</html>
