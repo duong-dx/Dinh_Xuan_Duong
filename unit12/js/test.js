@@ -135,7 +135,7 @@ $(function () {
 		var errCheckbox= false;
 		if (Checkbox==false) {
 			$('#check').html('This field is required.')
-			$('#item2').css('background','red')
+			$('#item4').css('background','red')
 			
 		}
 		else{
