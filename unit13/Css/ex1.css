@@ -1,0 +1,155 @@
+body{
+	margin: 0px;
+}
+.row{
+	width: 100%;
+}
+
+#head-top{
+	background: #DDDDDD;
+	
+	padding: 3% 0px;
+}
+#head-left{
+	font-size: 30px;
+	text-align: center;
+
+}
+#head-left>a{
+	text-decoration: none;
+	color: #2184be;
+}
+#head-left>a:hover{
+	
+	color:#FF6600;
+}
+#head-right{
+	margin-top:1%;
+}
+#bar{
+	list-style: none;
+	
+}
+#bar .item>a:hover{
+	color: #FF6600;
+}
+#bar .item>a{
+	text-decoration: none;
+	color: #2184be;
+}
+#head-botton{
+	padding-top: 6%;
+	text-align: center;
+	background-image: url('../images/b.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+	font-family: cursive , Lucida Console;
+	color:#FF6600;
+	padding-bottom: 5%;
+	font-size: 25px;
+	
+}
+#content1{
+	
+	background: #FF6600;
+	margin: 5%   auto 0% ;
+	padding: 2%;
+	font-size: 20px;
+	border-radius: 20px;
+	color: white;
+	
+
+}
+#button{
+	font: 25px imported;
+	color: #2184be;
+}
+#hr-top{
+	
+	border-radius: 10px;
+	width: 20%;
+	margin:  5%  auto 5%;
+	border: 1px #FF6600 solid;
+}
+#head-bt{
+	background: #3333FF;
+	color: white;
+	text-align: center;
+	padding-top: 8%;
+	padding-bottom: 5%;
+}
+#content2{
+	
+	color: #3333FF;
+	background: white;
+	margin: 5%   auto 0% ;
+	padding: 2%;
+	font-size: 20px;
+	border-radius: 20px;
+}
+#hr-bt{
+	height: 1px;
+	border-radius: 10px;
+	width: 20%;
+	margin:  5%  auto 5%;
+}
+#body-top{
+	padding-top: 5%;
+	text-align: center;
+	padding-left: 4%;
+}
+#body-top .item-body .h1{
+	color: #2184be;
+	font-size: 60px;
+}
+#body-top .item-body{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#body-top .hr-body{
+	width: 20%;
+	margin:5% auto 5%;
+	border: 1px #2184be solid;
+
+}
+#body-content{
+	padding-left: 4%;
+	margin-top: 2%;
+}
+#body-content .div-img{
+	margin-bottom: 1%;
+	margin-top: 1%
+}
+#body-content .div-img .img{
+	width: 100%;
+}
+#body-footer{
+	background: #444444;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	padding: 5% 0% 5% 5%;
+}
+#content-footer{
+	background: white;
+	color: grey;
+	margin: 5% auto;
+	padding: 3%;
+	border-radius: 20px;
+}
+#footer{
+	text-align: center;
+	padding:  5% ;
+
+}
+#hr-footer{
+	border: 1px #FF6600 solid;
+	margin: 5% auto;
+	width: 10%;
+}
+#footer .footer-ct{
+	margin: 8% auto;
+
+}
