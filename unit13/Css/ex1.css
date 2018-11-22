@@ -45,14 +45,14 @@ body{
 	background-size: 100% 100%;
 	
 	font-family: cursive , Lucida Console;
-	color:#FF6600;
+	color:black;
 	padding-bottom: 5%;
 	font-size: 25px;
 	
 }
 #content1{
 	
-	background: #FF6600;
+	background: black;
 	margin: 5%   auto 0% ;
 	padding: 2%;
 	font-size: 20px;
@@ -70,7 +70,7 @@ body{
 	border-radius: 10px;
 	width: 20%;
 	margin:  5%  auto 5%;
-	border: 1px #FF6600 solid;
+	border: 1px black solid;
 }
 #head-bt{
 	background: #3333FF;
